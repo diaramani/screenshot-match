@@ -64,7 +64,14 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      extinguish_diya: {
+        Args: { p_id: string; p_token: string }
+        Returns: undefined
+      }
+      release_bring_claim: {
+        Args: { p_id: string; p_token: string }
+        Returns: undefined
+      }
     }
     Enums: {
       [_ in never]: never
