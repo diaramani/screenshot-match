@@ -174,11 +174,11 @@ export function FitCheck() {
                 <p className="text-sm text-muted-foreground">Tap a colour to lock in your look.</p>
               </div>
             ) : (
-              <div className={`card-pop w-full animate-rise p-6 ${FITS[fit].bg}`}>
+              <div className={`card-pop w-full animate-rise p-6 ${FITS[fit]!.bg}`}>
                 <p className="font-display text-xs tracking-[0.2em]">FIT PASS • LOCKED IN</p>
-                <p className="mt-4 font-display text-5xl leading-none">{FITS[fit].name}</p>
-                <p className="font-script text-2xl">{FITS[fit].sub}</p>
-                <p className="mt-3 text-sm">{FITS[fit].line}</p>
+                <p className="mt-4 font-display text-5xl leading-none">{FITS[fit]!.name}</p>
+                <p className="font-script text-2xl">{FITS[fit]!.sub}</p>
+                <p className="mt-3 text-sm">{FITS[fit]!.line}</p>
               </div>
             )}
           </div>
