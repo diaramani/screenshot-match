@@ -8,3 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep party facts in the shared EVENT object and derive calendar links from it so displayed and exported dates stay aligned.
+- Invitation controls use the shared Button invitation variant; global invitation styling and palette live in src/styles.css.
