@@ -66,7 +66,7 @@ export function Invite() {
 export function Rsvp() {
   const { name, setName, commit } = useGuestName();
   const [answer, setAnswer] = useState<RsvpAnswer>("yes");
-  const [bringing, setBringing] = useState(BRING_OPTIONS[0]);
+  const [bringing, setBringing] = useState<string>(BRING_OPTIONS[0] ?? "");
   const [other, setOther] = useState("");
   const [note, setNote] = useState("");
   const [error, setError] = useState<string | null>(null);
