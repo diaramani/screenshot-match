@@ -203,7 +203,7 @@
   .invitation-opening { min-height: 790px; height: 94svh; max-height: 950px; }
   .opening-content { padding-top: 90px; padding-bottom: 55px; width: 74%; padding-left: 8px; padding-right: 8px; }
   .opening-content h1 { font-size: 52px; }
-  .opening-content p { font-size: 12px; }
+  .opening-content p { font-size: 12px; max-width: 235px; }
   .opening-content .eyebrow { font-size: 10px; }
   .invitation-opening header .eyebrow { max-width: 150px; font-size: 9px; }
   .folk-diya { width: 175px; }

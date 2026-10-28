@@ -11,3 +11,4 @@
 
 - Keep party facts in the shared EVENT object and derive calendar links from it so displayed and exported dates stay aligned.
 - Invitation controls use the shared Button invitation variant; global invitation styling and palette live in src/styles.css.
+- Use separate portrait and landscape painted backdrops via a picture source so decorative edges remain visible on narrow screens; motion respects reduced-motion preferences.

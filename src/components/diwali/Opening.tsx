@@ -67,7 +67,7 @@ export function Opening({ onDone }: { onDone: () => void }) {
           <Flame className={lit ? "animate-flicker" : ""} /> {lit ? "Let there be light" : "Light the diya"}
         </Button>
       </div>
-      <Button onClick={onDone} variant="ghost" className="opening-bottom absolute bottom-5 left-1/2 -translate-x-1/2 text-cream hover:bg-cream/10 hover:text-cream">The evening awaits <ArrowDown className="animate-floaty" /></Button>
+      <Button onClick={onDone} variant="ghost" className="opening-bottom absolute bottom-12 left-1/2 -translate-x-1/2 text-cream hover:bg-cream/10 hover:text-cream">The evening awaits <ArrowDown className="animate-floaty" /></Button>
     </section>
   );
 }

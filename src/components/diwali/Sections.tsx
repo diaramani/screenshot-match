@@ -13,7 +13,7 @@ function Label({ n, children, tone = "text-marigold" }: { n: string; children: R
 }
 
 export function Nav() {
-  return <nav className="sticky top-0 z-40 border-b border-ink/15 bg-cream"><div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4"><span className="shrink-0 font-script text-xl text-vermilion">Diwali at ours.</span><div className="flex gap-1 sm:gap-4">{[["invite", "Invite"], ["fit", "The fit"], ["venue", "The place"], ["gossip", "Notes"]].map(([id, label]) => <Button key={id} asChild variant="ghost" className="h-8 px-2 text-xs hover:bg-marigold/20"><a href={`#${id}`}>{label}</a></Button>)}</div></div></nav>;
+  return <nav className="sticky top-0 z-40 border-b border-ink/15 bg-cream"><div className="mx-auto flex max-w-6xl items-center justify-between gap-2 px-3 py-4 sm:gap-4 sm:px-5"><span className="shrink-0 font-script text-base text-vermilion sm:text-xl">Diwali at ours.</span><div className="flex gap-0 sm:gap-4">{[["invite", "Invite"], ["fit", "The fit"], ["venue", "The place"], ["gossip", "Notes"]].map(([id, label]) => <Button key={id} asChild variant="ghost" className="h-8 px-2 text-xs hover:bg-marigold/20"><a href={`#${id}`}>{label}</a></Button>)}</div></div></nav>;
 }
 
 export function useLocal<T>(key: string, initial: T) {
