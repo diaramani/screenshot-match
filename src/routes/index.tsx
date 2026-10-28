@@ -1,24 +1,40 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
+import { Opening } from "@/components/diwali/Opening";
+import { FitCheck, GossipWall, Invite, Nav, Venue } from "@/components/diwali/Sections";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Dil Waali Diwali — You're Invited" },
+      { name: "description", content: "Light the diya and unlock your Diwali party invite: date, dress code, venue and a gossip wall." },
+      { property: "og:title", content: "Dil Waali Diwali — You're Invited" },
+      { property: "og:description", content: "Mithai, masti and main character moments. Light the diya to RSVP." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
+  const [open, setOpen] = useState(false);
+  const enter = () => {
+    setOpen(true);
+    requestAnimationFrame(() => document.getElementById("invite")?.scrollIntoView({ behavior: "smooth" }));
+  };
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main>
+      <Opening onDone={enter} />
+      {open && (
+        <>
+          <Nav />
+          <Invite />
+          <FitCheck />
+          <Venue />
+          <GossipWall />
+        </>
+      )}
+    </main>
   );
 }
