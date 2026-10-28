@@ -38,8 +38,8 @@
   --color-ink: var(--ink);
   --color-peacock: var(--peacock);
 
-  --font-display: "Cormorant Garamond", Georgia, serif;
-  --font-script: "Cormorant Garamond", Georgia, serif;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-script: "Kalam", cursive;
   --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
 }
 
@@ -88,8 +88,8 @@
   }
 }
 
-@utility font-display { font-family: var(--font-display); font-weight: 500; letter-spacing: 0; }
-@utility font-script { font-family: var(--font-script); font-style: italic; font-weight: 500; }
+@utility font-display { font-family: var(--font-display); font-weight: 600; letter-spacing: 0; }
+@utility font-script { font-family: var(--font-script); font-style: normal; font-weight: 700; }
 
 @utility sunburst {
   background: repeating-conic-gradient(
@@ -153,18 +153,62 @@
 }
 
 :root {
-  --opening-shade: linear-gradient(to bottom, color-mix(in oklab, var(--vermilion) 15%, transparent), color-mix(in oklab, var(--ink) 12%, transparent));
+  --shadow-folk: 3px 4px 0 var(--ink);
+  --diya-shadow: 0 10px 15px color-mix(in oklab, var(--ink) 30%, transparent);
+  --flame-core: oklch(0.99 0.03 95);
+  --flame-gold: oklch(0.88 0.18 85);
+  --brass-light: oklch(0.88 0.15 90);
+  --brass-mid: oklch(0.78 0.16 80);
+  --brass-dark: oklch(0.55 0.13 60);
+  --rim-dark: oklch(0.7 0.15 75);
+  --rim-light: oklch(0.93 0.12 92);
+  --rim-end: oklch(0.65 0.14 70);
+  --oil-lit: oklch(0.55 0.14 55);
+  --oil-unlit: oklch(0.42 0.1 50);
+  --oil-dark: oklch(0.3 0.07 45);
+  --flame-tip: oklch(0.65 0.22 40);
+  --wick-lit: oklch(0.75 0.2 45);
+  --halo: oklch(0.95 0.15 90 / 0.85);
+  --art-shadow: oklch(0.2 0.05 30 / 0.35);
+  --oil-shine: oklch(0.65 0.13 60 / 0.6);
 }
 @layer components {
-  .eyebrow { font-family: var(--font-sans); font-size: 0.65rem; font-weight: 500; letter-spacing: 0; }
-  .invitation-opening { min-height: 720px; height: 94svh; max-height: 1000px; }
-  .opening-content { padding-top: 30px; padding-bottom: 180px; }
-  .opening-shade { background: var(--opening-shade); transition: opacity 1s ease; }
-  .is-lit .opening-shade { opacity: 0.3; }
-  .note-input { min-width: 0; border-bottom: 1px solid color-mix(in oklab, var(--ink) 35%, transparent); padding: 12px 0; outline: none; background: transparent; font-size: 14px; }
+  .eyebrow { font-family: var(--font-sans); font-size: 0.65rem; font-weight: 700; letter-spacing: 0; }
+  .invitation-opening { min-height: 790px; height: 94svh; max-height: 1000px; }
+  .opening-content { padding-top: 65px; padding-bottom: 70px; width: 55%; }
+  .opening-shade { background: color-mix(in oklab, var(--marigold) 0%, transparent); transition: background 1.5s ease; }
+  .is-lit .opening-shade { background: color-mix(in oklab, var(--marigold) 12%, transparent); mix-blend-mode: screen; }
+  .folk-diya { transform: perspective(700px) rotateY(var(--tilt-x, 0deg)) rotateX(var(--tilt-y, 0deg)); filter: drop-shadow(var(--diya-shadow)); }
+  .folk-star { position: absolute; width: 20px; height: 20px; animation: folk-twinkle 3s ease-in-out infinite; }
+  .folk-star-0 { left: 33%; top: 27%; }
+  .folk-star-1 { right: 32%; top: 32%; animation-delay: .7s; }
+  .folk-star-2 { left: 29%; top: 55%; animation-delay: 1.4s; }
+  .folk-star-3 { right: 29%; top: 64%; animation-delay: 2s; }
+  .folk-star-4 { left: 38%; bottom: 14%; animation-delay: .4s; }
+  .folk-star-5 { right: 37%; bottom: 17%; animation-delay: 1.8s; }
+  .folk-star-6 { left: 13%; top: 20%; animation-delay: 1s; }
+  .folk-star-7 { right: 12%; top: 18%; animation-delay: 2.4s; }
+  .folk-band { border-top: 7px double var(--marigold); border-bottom: 7px double var(--marigold); background-image: radial-gradient(color-mix(in oklab, var(--cream) 6%, transparent) 1px, transparent 1px); background-size: 8px 8px; }
+  .folk-control { box-shadow: var(--shadow-folk); transition: transform .2s ease, box-shadow .2s ease; }
+  .folk-control:hover { transform: translate(-2px, -2px) rotate(-1deg); }
+  .folk-swatch { border: 2px solid var(--ink); box-shadow: var(--shadow-folk); }
+  .folk-note { border: 2px solid var(--ink); box-shadow: var(--shadow-folk); animation: rise .6s ease both; }
+  .folk-note:nth-child(3n+1) { rotate: -1deg; }
+  .folk-note:nth-child(3n+2) { rotate: 1deg; }
+  .note-input { min-width: 0; border: 2px solid var(--ink); border-radius: 8px; padding: 12px; outline: none; background: var(--cream); font-size: 14px; }
   .note-input:focus { border-color: var(--pink); }
 }
+@keyframes folk-twinkle { 0%,100% { opacity: .35; transform: scale(.75) rotate(0); } 50% { opacity: 1; transform: scale(1.15) rotate(20deg); } }
 @media (max-width: 639px) {
-  .invitation-opening { min-height: 710px; height: 94svh; }
-  .opening-content { padding-top: 25px; padding-bottom: 160px; }
+  .invitation-opening { min-height: 790px; height: 94svh; max-height: 950px; }
+  .opening-content { padding-top: 90px; padding-bottom: 55px; width: 74%; padding-left: 8px; padding-right: 8px; }
+  .opening-content h1 { font-size: 52px; }
+  .opening-content p { font-size: 12px; }
+  .opening-content .eyebrow { font-size: 10px; }
+  .invitation-opening header .eyebrow { max-width: 150px; font-size: 9px; }
+  .folk-diya { width: 175px; }
+  .folk-star-0 { left: 24%; }
+  .folk-star-1 { right: 23%; }
+  .folk-star-2 { left: 21%; }
+  .folk-star-3 { right: 21%; }
 }

@@ -16,7 +16,7 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        invitation: "border border-current rounded-none bg-transparent font-medium hover:opacity-80",
+        invitation: "folk-control border-2 border-current rounded-lg bg-transparent font-semibold hover:opacity-90",
       },
       size: {
         default: "h-9 px-4 py-2",
