@@ -51,8 +51,7 @@ export function Opening({ onDone }: { onDone: () => void }) {
       <picture className="absolute inset-0 -z-20"><source media="(max-width: 639px)" srcSet={folkMobile} /><img src={folk} alt="Hand-painted marigolds and peacocks surrounding a festive green arch" width={1536} height={1024} className="h-full w-full object-fill" fetchPriority="high" /></picture>
       <div className="opening-shade pointer-events-none absolute inset-0 -z-10" />
       <div className="folk-sparkles pointer-events-none absolute inset-0" aria-hidden="true">{Array.from({ length: 8 }, (_, i) => <Sparkle key={i} className={`folk-star folk-star-${i} text-marigold`} />)}</div>
-      <header className="flex items-center justify-between gap-4 px-7 py-7 md:px-16">
-        <span className="eyebrow">MITHAI. SPARKLE. YOUR PEOPLE.</span>
+      <header className="flex items-center justify-end gap-4 px-7 py-7 md:px-16">
         <Button variant="invitation" size="icon" onClick={() => setSound(!sound)} aria-pressed={sound} aria-label={sound ? "Mute sound" : "Enable sound"} title={sound ? "Mute sound" : "Enable sound"} className="shrink-0 rounded-full border-cream/40 text-cream">
           {sound ? <Volume2 /> : <VolumeX />}
         </Button>
