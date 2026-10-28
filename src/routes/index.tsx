@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { Opening } from "@/components/diwali/Opening";
-import { DiyaWall, Invite, Nav, ShareTable, Venue } from "@/components/diwali/Sections";
+import { DiyaWall, Invite, Nav, Rsvp, Venue } from "@/components/diwali/Sections";
 import { useShareRealtime } from "@/lib/share";
 
 export const Route = createFileRoute("/")({
@@ -32,7 +32,7 @@ function Index() {
         <>
           <Nav />
           <Invite />
-          <ShareTable />
+          <Rsvp />
           <Venue />
           <DiyaWall />
         </>
