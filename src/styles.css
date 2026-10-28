@@ -177,8 +177,10 @@
 @layer components {
   .eyebrow { font-family: var(--font-sans); font-size: 0.65rem; font-weight: 700; letter-spacing: 0; }
   .invitation-opening { min-height: 790px; height: 94svh; max-height: 1000px; }
-  .opening-content { padding-top: 40px; padding-bottom: 70px; width: min(340px, 34svh + 60px); }
-  .opening-content h1 { font-size: clamp(52px, 8svh, 76px); }
+  .opening-content { padding-top: 40px; padding-bottom: 70px; width: min(380px, 40svh + 40px); }
+  .opening-content h1 { font-size: clamp(44px, 6.5svh, 64px); }
+  .opening-content .folk-diya { width: clamp(120px, 17svh, 170px); }
+  .opening-bottom { display: none; }
   .opening-shade { background: color-mix(in oklab, var(--marigold) 0%, transparent); transition: background 1.5s ease; }
   .is-lit .opening-shade { background: color-mix(in oklab, var(--marigold) 12%, transparent); mix-blend-mode: screen; }
   .folk-diya { transform: perspective(700px) rotateY(var(--tilt-x, 0deg)) rotateX(var(--tilt-y, 0deg)); filter: drop-shadow(var(--diya-shadow)); }

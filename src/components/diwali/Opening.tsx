@@ -57,7 +57,7 @@ export function Opening({ onDone }: { onDone: () => void }) {
       </header>
       <div className="opening-content animate-rise mx-auto flex max-w-3xl flex-col items-center px-6 text-center">
         <p className="eyebrow text-vermilion">YOU’RE INVITED</p>
-        <h1 className="mt-3 font-display text-6xl leading-[1.05] sm:text-7xl lg:text-8xl">Diwali<br /><span className="font-script text-vermilion">at ours.</span></h1>
+        <h1 className="mt-3 font-display text-6xl leading-[1.05] sm:text-7xl lg:text-8xl">Diwali<br /><span className="whitespace-nowrap font-script text-vermilion">at ours.</span></h1>
         <p className="mt-4 max-w-sm text-sm leading-6 sm:text-base">An evening with our favourite people.<br />A little mithai, a little sparkle, and a full house.</p>
         <p className="mt-4 text-sm">30 October <span className="mx-3 text-vermilion">✦</span> {EVENT.time}</p>
         <Button onClick={light} aria-label="Light the diya" variant="ghost" className="folk-diya group mt-3 h-auto w-52 p-0 hover:bg-transparent"><Diya lit={lit} className="!h-auto !w-full overflow-visible transition-transform group-hover:-translate-y-2" /></Button>
