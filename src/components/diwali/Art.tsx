@@ -111,3 +111,36 @@ export function DiyaLogo() {
     </span>
   );
 }
+
+export function MiniDiya({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 64 64" className={className} aria-hidden="true">
+      <defs>
+        <linearGradient id="m-bowl" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stopColor="var(--brass-light)" />
+          <stop offset="0.5" stopColor="var(--brass-mid)" />
+          <stop offset="1" stopColor="var(--brass-dark)" />
+        </linearGradient>
+        <linearGradient id="m-rim" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stopColor="var(--rim-dark)" />
+          <stop offset="0.5" stopColor="var(--rim-light)" />
+          <stop offset="1" stopColor="var(--rim-end)" />
+        </linearGradient>
+        <radialGradient id="m-flame" cx="0.5" cy="0.75" r="0.6">
+          <stop offset="0" stopColor="var(--flame-core)" />
+          <stop offset="0.45" stopColor="var(--flame-gold)" />
+          <stop offset="1" stopColor="var(--flame-tip)" />
+        </radialGradient>
+      </defs>
+      <ellipse cx="32" cy="59" rx="17" ry="3" fill="var(--art-shadow)" />
+      <path d="M13 44 Q15 55 32 56 Q49 55 51 44 Z" fill="url(#m-bowl)" stroke="var(--ink)" strokeWidth="3" strokeLinejoin="round" />
+      <ellipse cx="32" cy="44" rx="19" ry="6" fill="url(#m-rim)" stroke="var(--ink)" strokeWidth="3" />
+      <ellipse cx="32" cy="45" rx="14" ry="4" fill="var(--oil-dark)" />
+      <path d="M32 43 L32 32" stroke="var(--ink)" strokeWidth="2.5" strokeLinecap="round" />
+      <g className="animate-flicker">
+        <path d="M32 11 C38 20 37 28 32 31 C27 28 26 20 32 11 Z" fill="url(#m-flame)" stroke="var(--ink)" strokeWidth="2" />
+        <path d="M32 20 C35 24 34 28 32 30 C30 28 29 24 32 20 Z" fill="var(--flame-core)" />
+      </g>
+    </svg>
+  );
+}

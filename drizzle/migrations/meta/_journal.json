@@ -1,0 +1,34 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1793202746044,
+      "tag": "0000_create_share_list_and_diyas",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1793202776795,
+      "tag": "0001_scope_release_policies_to_request_headers",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1793202842692,
+      "tag": "0002_hide_claim_tokens_from_reads",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1793203048010,
+      "tag": "0003_add_owner_checked_release_functions",
+      "breakpoints": true
+    }
+  ]
+}

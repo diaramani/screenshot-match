@@ -192,9 +192,7 @@
   .folk-control { box-shadow: var(--shadow-folk); transition: transform .2s ease, box-shadow .2s ease; }
   .folk-control:hover { transform: translate(-2px, -2px) rotate(-1deg); }
   .folk-swatch { border: 2px solid var(--ink); box-shadow: var(--shadow-folk); }
-  .folk-note { border: 2px solid var(--ink); box-shadow: var(--shadow-folk); animation: rise .6s ease both; }
-  .folk-note:nth-child(3n+1) { rotate: -1deg; }
-  .folk-note:nth-child(3n+2) { rotate: 1deg; }
+  .mini-diya { filter: drop-shadow(0 0 10px var(--halo)); }
   .note-input { min-width: 0; border: 2px solid var(--ink); border-radius: 8px; padding: 12px; outline: none; background: var(--cream); font-size: 14px; }
   .note-input:focus { border-color: var(--pink); }
 }
