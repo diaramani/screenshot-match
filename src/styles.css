@@ -35,7 +35,6 @@
   --color-saffron: var(--saffron);
   --color-emerald: var(--emerald);
   --color-pink: var(--pink);
-  --color-blush: var(--blush);
   --color-ink: var(--ink);
   --color-peacock: var(--peacock);
 
@@ -52,7 +51,6 @@
   --saffron: oklch(0.7 0.18 50);
   --emerald: oklch(0.42 0.1 158);
   --pink: oklch(0.62 0.23 360);
-  --blush: oklch(0.8 0.11 355);
   --ink: oklch(0.2 0.01 60);
   --peacock: oklch(0.5 0.09 215);
 
@@ -177,10 +175,7 @@
 @layer components {
   .eyebrow { font-family: var(--font-sans); font-size: 0.65rem; font-weight: 700; letter-spacing: 0; }
   .invitation-opening { min-height: 790px; height: 94svh; max-height: 1000px; }
-  .opening-content { padding-top: 40px; padding-bottom: 70px; width: min(380px, 40svh + 40px); }
-  .opening-content h1 { font-size: clamp(44px, 6.5svh, 64px); }
-  .opening-content .folk-diya { width: clamp(120px, 17svh, 170px); }
-  .opening-bottom { display: none; }
+  .opening-content { padding-top: 65px; padding-bottom: 70px; width: 55%; }
   .opening-shade { background: color-mix(in oklab, var(--marigold) 0%, transparent); transition: background 1.5s ease; }
   .is-lit .opening-shade { background: color-mix(in oklab, var(--marigold) 12%, transparent); mix-blend-mode: screen; }
   .folk-diya { transform: perspective(700px) rotateY(var(--tilt-x, 0deg)) rotateX(var(--tilt-y, 0deg)); filter: drop-shadow(var(--diya-shadow)); }
@@ -198,21 +193,13 @@
   .folk-control:hover { transform: translate(-2px, -2px) rotate(-1deg); }
   .folk-swatch { border: 2px solid var(--ink); box-shadow: var(--shadow-folk); }
   .mini-diya { filter: drop-shadow(0 0 10px var(--halo)); }
-  .note-input { min-width: 0; border: 2px solid var(--ink); border-radius: 8px; padding: 12px; outline: none; background: var(--cream); color: var(--ink); font-size: 14px; }
-  .note-input::placeholder { color: color-mix(in oklab, var(--ink) 55%, transparent); }
-  .opening-art { left: 50%; top: 0; height: 100%; width: auto; transform: translateX(-50%); max-width: none; }
-  .art-panel { background-size: 100% 100%; background-repeat: no-repeat; padding: clamp(110px, 18%, 170px) clamp(44px, 12%, 96px) clamp(80px, 12%, 120px); text-align: center; }
-  .art-panel .eyebrow { justify-content: center; }
-  .art-panel-peacock { padding-bottom: clamp(160px, 30%, 260px); }
-  .art-cover { position: relative; isolation: isolate; background-size: cover; background-position: center; }
-  .art-cover::before { content: ""; position: absolute; inset: 0; z-index: -1; background: color-mix(in oklab, var(--emerald) 55%, transparent); }
+  .note-input { min-width: 0; border: 2px solid var(--ink); border-radius: 8px; padding: 12px; outline: none; background: var(--cream); font-size: 14px; }
   .note-input:focus { border-color: var(--pink); }
 }
 @keyframes folk-twinkle { 0%,100% { opacity: .35; transform: scale(.75) rotate(0); } 50% { opacity: 1; transform: scale(1.15) rotate(20deg); } }
 @media (max-width: 639px) {
   .invitation-opening { min-height: 790px; height: 94svh; max-height: 950px; }
-  .opening-art { width: 100%; object-fit: fill; }
-  .opening-content { padding-top: 70px; padding-bottom: 55px; width: 66%; padding-left: 8px; padding-right: 8px; }
+  .opening-content { padding-top: 90px; padding-bottom: 55px; width: 74%; padding-left: 8px; padding-right: 8px; }
   .opening-content h1 { font-size: 52px; }
   .opening-content p { font-size: 12px; max-width: 235px; }
   .opening-content .eyebrow { font-size: 10px; }
