@@ -6,10 +6,10 @@ import { FitCheck, GossipWall, Invite, Nav, Venue } from "@/components/diwali/Se
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Dil Waali Diwali — You're Invited" },
-      { name: "description", content: "Light the diya and unlock your Diwali party invite: date, dress code, venue and a gossip wall." },
-      { property: "og:title", content: "Dil Waali Diwali — You're Invited" },
-      { property: "og:description", content: "Mithai, masti and main character moments. Light the diya to RSVP." },
+      { title: "Diwali at Ours — 30 October" },
+      { name: "description", content: "Three friends, one Diwali celebration. Join us on 30 October 2026, from 5:30 PM onwards. You better be there." },
+      { property: "og:title", content: "Diwali at Ours — 30 October" },
+      { property: "og:description", content: "A little mithai, a little sparkle, and our favourite people. 30 October, 5:30 PM onwards." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
