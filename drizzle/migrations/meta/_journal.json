@@ -8,6 +8,13 @@
       "when": 1793202746044,
       "tag": "0000_create_share_list_and_diyas",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1793202776795,
+      "tag": "0001_scope_release_policies_to_request_headers",
+      "breakpoints": true
     }
   ]
 }
