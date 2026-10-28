@@ -67,11 +67,7 @@ export async function claimItem(item: string, name: string): Promise<string> {
 }
 
 export async function releaseClaim(id: string): Promise<void> {
-  const { error } = await supabase
-    .from("bring_claims")
-    .delete()
-    .eq("id", id)
-    .set({ "x-claim-token": guestToken() });
+  const { error } = await supabase.rpc("release_bring_claim", { p_id: id, p_token: guestToken() });
   if (error) throw error;
 }
 
@@ -86,11 +82,7 @@ export async function lightDiya(name: string): Promise<string> {
 }
 
 export async function extinguishDiya(id: string): Promise<void> {
-  const { error } = await supabase
-    .from("diyas")
-    .delete()
-    .eq("id", id)
-    .set({ "x-claim-token": guestToken() });
+  const { error } = await supabase.rpc("extinguish_diya", { p_id: id, p_token: guestToken() });
   if (error) throw error;
 }
 
