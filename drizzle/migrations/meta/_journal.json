@@ -15,6 +15,13 @@
       "when": 1793202776795,
       "tag": "0001_scope_release_policies_to_request_headers",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1793202842692,
+      "tag": "0002_hide_claim_tokens_from_reads",
+      "breakpoints": true
     }
   ]
 }
