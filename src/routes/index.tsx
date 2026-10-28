@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { Opening } from "@/components/diwali/Opening";
-import { FitCheck, GossipWall, Invite, Nav, Venue } from "@/components/diwali/Sections";
+import { DiyaWall, Invite, Nav, ShareTable, Venue } from "@/components/diwali/Sections";
+import { useShareRealtime } from "@/lib/share";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -19,6 +20,7 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   const [open, setOpen] = useState(false);
+  useShareRealtime();
   const enter = () => {
     setOpen(true);
     requestAnimationFrame(() => document.getElementById("invite")?.scrollIntoView({ behavior: "smooth" }));
@@ -30,9 +32,9 @@ function Index() {
         <>
           <Nav />
           <Invite />
-          <FitCheck />
+          <ShareTable />
           <Venue />
-          <GossipWall />
+          <DiyaWall />
         </>
       )}
     </main>
