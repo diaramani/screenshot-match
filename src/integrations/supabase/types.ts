@@ -14,7 +14,51 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      bring_claims: {
+        Row: {
+          created_at: string
+          id: string
+          item: string
+          name: string
+          token: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          item: string
+          name: string
+          token: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          item?: string
+          name?: string
+          token?: string
+        }
+        Relationships: []
+      }
+      diyas: {
+        Row: {
+          created_at: string
+          id: string
+          name: string
+          token: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          name: string
+          token: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          name?: string
+          token?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
